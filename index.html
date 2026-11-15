@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anataga-Ningende-Aremasuyouni</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="synthesis.css" />
+  </head>
+  <body>
+    <p class="header-row">
+      <span>IME確定の瞬間に読み上げます</span>
+      <button class="clearBtn">入力済テキスト消去</button>
+      <button class="stopBtn">音声停止（キュー内も全キャンセル）</button>
+    </p>
+    <textarea
+      class="typingArea"
+      placeholder="ここに文字を入力してください"
+      spellcheck="true"
+    ></textarea>
+    <div class="statusDiv">
+      <span class="statusText">ERROR</span>
+    </div>
+    <!-- コントローラー領域 -->
+    <div class="controls">
+      <button type="button" class="toggleLangBtn lang-ja">日本語</button>
+      <label class="speakerControl">
+        読み上げ音声:
+        <select class="speakerSelect">
+          <option value="">**********</option>
+        </select>
+      </label>
+      <label class="speedControl">
+        読み上げ速度:
+        <span class="speedRow">
+          <input
+            type="range"
+            class="speedRange"
+            min="0.5"
+            max="2.0"
+            step="0.1"
+            value="1.2"
+          />
+          <span class="speedValue">1.2</span>
+        </span>
+      </label>
+    </div>
+    <script src="synthesis.js"></script>
+  </body>
+</html>
+
+<!-- End of HTML -->
